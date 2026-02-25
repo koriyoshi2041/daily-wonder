@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import SketchGallery from '../components/SketchGallery.astro'
+import { getCollection } from 'astro:content'
+
+const allSketches = await getCollection('sketches')
+const sortedSketches = [...allSketches].sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+)
+
+const latestSketch = sortedSketches[0]
+const recentSketches = sortedSketches.slice(0, 12)
+---
+
+<BaseLayout title="Home">
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Daily Wonder</h1>
+      <p class="hero-subtitle">
+        A creative coding journal — one sketch per day, exploring generative art,
+        interactive visuals, and computational beauty.
+      </p>
+      {latestSketch && (
+        <a href={`/sketches/${latestSketch.id}`} class="hero-cta">
+          View latest: Day {latestSketch.data.day}
+          <span class="cta-arrow">&rarr;</span>
+        </a>
+      )}
+    </div>
+  </section>
+
+  <section class="recent container">
+    <div class="section-header">
+      <h2>Recent Sketches</h2>
+      <a href="/archive" class="view-all">View all &rarr;</a>
+    </div>
+    <SketchGallery sketches={recentSketches} />
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding: var(--space-5) 0 var(--space-4);
+  }
+
+  .hero-text {
+    max-width: 600px;
+  }
+
+  .hero-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.125rem;
+    margin-top: var(--space-2);
+    line-height: 1.7;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: var(--space-3);
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 6px;
+    transition: background-color var(--transition-fast);
+  }
+
+  .hero-cta:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-bg);
+  }
+
+  .cta-arrow {
+    transition: transform var(--transition-fast);
+  }
+
+  .hero-cta:hover .cta-arrow {
+    transform: translateX(4px);
+  }
+
+  .recent {
+    padding-bottom: var(--space-4);
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--space-3);
+  }
+
+  .view-all {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .view-all:hover {
+    color: var(--color-accent);
+  }
+</style>

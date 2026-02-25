@@ -1,0 +1,120 @@
+---
+interface Props {
+  title: string
+  description?: string
+  ogImage?: string
+}
+
+const { title, description = 'Daily creative coding experiments', ogImage } = Astro.props
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title} | Daily Wonder</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    {ogImage && (
+      <meta property="og:image" content={ogImage} />
+      <meta name="twitter:card" content="summary_large_image" />
+    )}
+    <meta property="og:title" content={`${title} | Daily Wonder`} />
+    <meta property="og:description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container">
+        <a href="/" class="site-title">Daily Wonder</a>
+        <div class="nav-links">
+          <a href="/archive">Archive</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-text">Daily Wonder — a creative coding journal</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  @import '../styles/global.css';
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-2) 0;
+  }
+
+  .site-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+  }
+
+  .site-title:hover {
+    color: var(--color-accent);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: var(--space-2);
+  }
+
+  .nav-links a {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-text);
+  }
+
+  main {
+    min-height: calc(100vh - 10rem);
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-3) 0;
+    margin-top: var(--space-4);
+  }
+
+  .footer-text {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    text-align: center;
+  }
+</style>

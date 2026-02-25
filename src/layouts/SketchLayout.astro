@@ -1,0 +1,129 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import SketchNav from '../components/SketchNav.astro'
+
+interface Props {
+  title: string
+  date: Date
+  day: number
+  tags: string[]
+  tools: string[]
+  description?: string
+  prevSlug?: string
+  nextSlug?: string
+}
+
+const { title, date, day, tags, tools, description, prevSlug, nextSlug } = Astro.props
+
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+})
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="sketch-page container">
+    <header class="sketch-header">
+      <div class="sketch-meta">
+        <span class="day-number">Day {day}</span>
+        <time datetime={date.toISOString()}>{formattedDate}</time>
+      </div>
+      <h1>{title}</h1>
+      {description && <p class="sketch-description">{description}</p>}
+      <div class="sketch-tags">
+        {tools.map((tool) => (
+          <span class="tag tag-tool">{tool}</span>
+        ))}
+        {tags.map((tag) => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+    </header>
+
+    <div class="sketch-canvas">
+      <slot />
+    </div>
+
+    <div class="sketch-notes">
+      <slot name="notes" />
+    </div>
+
+    <SketchNav prevSlug={prevSlug} nextSlug={nextSlug} />
+  </article>
+</BaseLayout>
+
+<style>
+  .sketch-page {
+    padding-top: var(--space-3);
+    padding-bottom: var(--space-4);
+  }
+
+  .sketch-header {
+    margin-bottom: var(--space-3);
+  }
+
+  .sketch-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    margin-bottom: var(--space-1);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  .day-number {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-family: var(--font-mono);
+  }
+
+  .sketch-description {
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+    max-width: 60ch;
+  }
+
+  .sketch-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: var(--space-2);
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 9999px;
+    background-color: var(--color-surface);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+  }
+
+  .tag-tool {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    background-color: rgba(94, 234, 212, 0.05);
+  }
+
+  .sketch-canvas {
+    margin: var(--space-3) 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 400px;
+  }
+
+  .sketch-notes {
+    max-width: 65ch;
+    margin: var(--space-3) auto 0;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+  }
+
+  .sketch-notes :global(p) {
+    margin-bottom: var(--space-2);
+  }
+</style>

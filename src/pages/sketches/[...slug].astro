@@ -1,0 +1,43 @@
+---
+import SketchLayout from '../../layouts/SketchLayout.astro'
+import SketchEmbed from '../../components/SketchEmbed.astro'
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+  const allSketches = await getCollection('sketches')
+  const sorted = [...allSketches].sort(
+    (a, b) => a.data.date.getTime() - b.data.date.getTime()
+  )
+
+  return sorted.map((sketch, index) => ({
+    params: { slug: sketch.id },
+    props: {
+      sketch,
+      prevSlug: index > 0 ? sorted[index - 1].id : undefined,
+      nextSlug: index < sorted.length - 1 ? sorted[index + 1].id : undefined,
+    },
+  }))
+}
+
+const { sketch, prevSlug, nextSlug } = Astro.props
+const { Content } = await sketch.render()
+
+const sketchDate = sketch.data.date.toISOString().slice(0, 10)
+---
+
+<SketchLayout
+  title={sketch.data.title}
+  date={sketch.data.date}
+  day={sketch.data.day}
+  tags={sketch.data.tags}
+  tools={sketch.data.tools}
+  description={sketch.data.description}
+  prevSlug={prevSlug}
+  nextSlug={nextSlug}
+>
+  <SketchEmbed sketchDate={sketchDate} />
+
+  <div slot="notes">
+    <Content />
+  </div>
+</SketchLayout>

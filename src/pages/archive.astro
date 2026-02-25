@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import SketchGallery from '../components/SketchGallery.astro'
+import { getCollection } from 'astro:content'
+
+const allSketches = await getCollection('sketches')
+const sortedSketches = [...allSketches].sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+)
+
+const totalDays = allSketches.length
+---
+
+<BaseLayout title="Archive" description="All daily creative coding sketches">
+  <section class="archive container">
+    <header class="archive-header">
+      <h1>Archive</h1>
+      <p class="archive-count">
+        <span class="count-number">{totalDays}</span> {totalDays === 1 ? 'sketch' : 'sketches'} and counting
+      </p>
+    </header>
+
+    <SketchGallery sketches={sortedSketches} />
+  </section>
+</BaseLayout>
+
+<style>
+  .archive {
+    padding: var(--space-4) 0;
+  }
+
+  .archive-header {
+    margin-bottom: var(--space-3);
+  }
+
+  .archive-count {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-top: var(--space-1);
+  }
+
+  .count-number {
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-weight: 700;
+  }
+</style>

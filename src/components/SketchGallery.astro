@@ -1,0 +1,40 @@
+---
+import SketchCard from './SketchCard.astro'
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  sketches: CollectionEntry<'sketches'>[]
+}
+
+const { sketches } = Astro.props
+---
+
+<section class="gallery">
+  <div class="gallery-grid">
+    {sketches.map((sketch) => (
+      <SketchCard
+        title={sketch.data.title}
+        slug={sketch.id}
+        day={sketch.data.day}
+        date={sketch.data.date}
+        thumbnail={sketch.data.thumbnail}
+        tags={sketch.data.tags}
+        tools={sketch.data.tools}
+      />
+    ))}
+  </div>
+</section>
+
+<style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--gallery-gap);
+  }
+
+  @media (max-width: 640px) {
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+  }
+</style>

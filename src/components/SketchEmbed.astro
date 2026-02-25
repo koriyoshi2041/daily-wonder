@@ -1,0 +1,83 @@
+---
+interface Props {
+  sketchDate: string
+  width?: number
+  height?: number
+}
+
+const { sketchDate, width = 800, height = 800 } = Astro.props
+---
+
+<div
+  class="sketch-embed"
+  id="sketch-container"
+  data-sketch-date={sketchDate}
+  style={`max-width: ${width}px; aspect-ratio: ${width} / ${height};`}
+>
+  <div class="sketch-loading">Loading sketch...</div>
+</div>
+
+<script>
+  const sketchModules = import.meta.glob<{ default: (container: HTMLElement) => void }>(
+    '../sketches/*/sketch.ts'
+  )
+
+  const container = document.getElementById('sketch-container')
+  if (container) {
+    const sketchDate = container.dataset.sketchDate
+    const modulePath = `../sketches/${sketchDate}/sketch.ts`
+    const loader = sketchModules[modulePath]
+
+    if (loader) {
+      loader().then((mod) => {
+        const loadingEl = container.querySelector('.sketch-loading')
+        if (loadingEl) {
+          loadingEl.remove()
+        }
+
+        if (typeof mod.default === 'function') {
+          mod.default(container)
+        }
+      }).catch((err) => {
+        const loadingEl = container.querySelector('.sketch-loading')
+        if (loadingEl) {
+          loadingEl.textContent = 'Failed to load sketch'
+        }
+        console.error('Failed to load sketch:', err)
+      })
+    } else {
+      const loadingEl = container.querySelector('.sketch-loading')
+      if (loadingEl) {
+        loadingEl.textContent = 'Sketch not found'
+      }
+    }
+  }
+</script>
+
+<style>
+  .sketch-embed {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-color: var(--color-bg);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .sketch-embed :global(canvas) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .sketch-loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+  }
+</style>

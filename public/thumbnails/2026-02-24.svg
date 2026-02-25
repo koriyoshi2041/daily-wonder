@@ -1,0 +1,5 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  <text x="200" y="190" fill="#5eead4" font-family="monospace" font-size="14" text-anchor="middle">Day 1</text>
+  <text x="200" y="220" fill="#888888" font-family="sans-serif" font-size="12" text-anchor="middle">Drifting Particles</text>
+</svg>
