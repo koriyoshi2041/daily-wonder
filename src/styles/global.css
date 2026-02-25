@@ -86,5 +86,11 @@ code {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 var(--space-2);
+  padding: 0 var(--space-3);
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 var(--space-2);
+  }
 }
