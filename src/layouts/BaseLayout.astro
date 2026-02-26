@@ -35,6 +35,34 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script is:inline>
+      const getTheme = () => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+          return 'light';
+        }
+        return 'dark';
+      };
+
+      const theme = getTheme();
+      document.documentElement.setAttribute('data-theme', theme);
+      
+      function setupThemeToggle() {
+        const toggle = document.getElementById('theme-toggle');
+        if (toggle) {
+          toggle.addEventListener('click', () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+          });
+        }
+      }
+      
+      document.addEventListener('astro:after-swap', setupThemeToggle);
+      document.addEventListener('DOMContentLoaded', setupThemeToggle);
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -42,6 +70,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
         <a href="/" class="site-title">Daily Wonder</a>
         <div class="nav-links">
           <a href="/archive">Archive</a>
+          <button id="theme-toggle" class="theme-toggle" title="Toggle theme">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+          </button>
         </div>
       </nav>
     </header>
@@ -102,6 +134,36 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
   .nav-links a:hover {
     color: var(--color-text);
+  }
+
+  .theme-toggle {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: 0;
+    margin-left: var(--space-1);
+    border-radius: 99px;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+  }
+
+  .theme-toggle:hover {
+    color: var(--color-text);
+    background-color: var(--color-surface);
+  }
+
+  .theme-toggle .moon,
+  html[data-theme='light'] .theme-toggle .sun {
+    display: none;
+  }
+
+  html[data-theme='light'] .theme-toggle .moon {
+    display: inline-block;
   }
 
   main {
