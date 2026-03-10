@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprawling DAG - Daily Wonder</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      overflow: hidden;
+      background: #181820;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    canvas {
+      display: block;
+    }
+    
+    .controls {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      color: #95a5a6;
+      font-size: 12px;
+      background: rgba(30, 30, 40, 0.9);
+      padding: 12px 16px;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+    
+    .controls kbd {
+      background: #3d3d4d;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <script src="sketch.js"></script>
+  <div class="controls">
+    <kbd>Click</kbd> Select node & view lineage<br>
+    <kbd>Space</kbd> Spawn burst<br>
+    <kbd>R</kbd> Reset
+  </div>
+</body>
+</html>
