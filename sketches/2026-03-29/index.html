@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belief Revision — When Evidence Arrives</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; background: #0a0a0a; cursor: crosshair; }
+    #info {
+      position: fixed; bottom: 20px; left: 20px;
+      color: rgba(255,255,255,0.5); font: 12px/1.5 monospace;
+      pointer-events: none; z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div id="info">
+    click: send evidence &nbsp;|&nbsp; hold: sustained pressure &nbsp;|&nbsp; space: reset beliefs<br>
+    belief revision — when evidence arrives, who changes their mind?
+  </div>
+  <script src="sketch.js"></script>
+</body>
+</html>
