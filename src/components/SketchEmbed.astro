@@ -48,8 +48,14 @@ const { sketchDate, width = 800, height = 800 } = Astro.props
     } else {
       const loadingEl = container.querySelector('.sketch-loading')
       if (loadingEl) {
-        loadingEl.textContent = 'Sketch not found'
+        loadingEl.remove()
       }
+      const fallback = document.createElement('iframe')
+      fallback.title = `${sketchDate} standalone sketch`
+      fallback.src = `/sketches/${sketchDate}/`
+      fallback.loading = 'lazy'
+      fallback.setAttribute('allow', 'fullscreen')
+      container.appendChild(fallback)
     }
   }
 </script>
@@ -68,6 +74,15 @@ const { sketchDate, width = 800, height = 800 } = Astro.props
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  .sketch-embed :global(iframe) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 0;
+    background: var(--color-bg);
   }
 
   .sketch-loading {

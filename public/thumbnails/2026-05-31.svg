@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#f4f0e7"/>
+  <g fill="none" stroke-linecap="round">
+    <ellipse cx="400" cy="414" rx="340" ry="220" stroke="#c7d6c5" stroke-width="4"/>
+    <ellipse cx="400" cy="414" rx="284" ry="184" stroke="#d9cdb5" stroke-width="3"/>
+    <ellipse cx="400" cy="414" rx="226" ry="145" stroke="#c7d6c5" stroke-width="3"/>
+    <ellipse cx="400" cy="414" rx="170" ry="110" stroke="#d9cdb5" stroke-width="2"/>
+    <path d="M178 263 C279 170 394 641 552 251" stroke="#303932" stroke-opacity=".52" stroke-width="9"/>
+    <path d="M221 560 C348 333 497 513 623 329" stroke="#303932" stroke-opacity=".45" stroke-width="7"/>
+    <path d="M250 379 C362 232 450 610 596 486" stroke="#303932" stroke-opacity=".38" stroke-width="6"/>
+  </g>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" text-anchor="middle">
+    <g>
+      <circle cx="179" cy="263" r="70" fill="#3f6058" fill-opacity=".24"/>
+      <circle cx="179" cy="263" r="49" fill="#3f6058"/>
+      <circle cx="165" cy="250" r="17" fill="#fff7dd" fill-opacity=".9"/>
+      <text x="179" y="269" font-size="18" fill="#263036">claim</text>
+    </g>
+    <g>
+      <circle cx="552" cy="251" r="72" fill="#bb6b45" fill-opacity=".24"/>
+      <circle cx="552" cy="251" r="50" fill="#bb6b45"/>
+      <circle cx="538" cy="237" r="18" fill="#fff7dd" fill-opacity=".9"/>
+      <text x="552" y="257" font-size="18" fill="#263036">source</text>
+    </g>
+    <g>
+      <circle cx="221" cy="560" r="69" fill="#425d82" fill-opacity=".23"/>
+      <circle cx="221" cy="560" r="48" fill="#425d82"/>
+      <circle cx="208" cy="547" r="17" fill="#fff7dd" fill-opacity=".9"/>
+      <text x="221" y="566" font-size="18" fill="#263036">test</text>
+    </g>
+    <g>
+      <circle cx="623" cy="329" r="73" fill="#7d4b5b" fill-opacity=".24"/>
+      <circle cx="623" cy="329" r="51" fill="#7d4b5b"/>
+      <circle cx="608" cy="315" r="18" fill="#fff7dd" fill-opacity=".9"/>
+      <text x="623" y="335" font-size="18" fill="#263036">risk</text>
+    </g>
+    <g>
+      <circle cx="596" cy="486" r="69" fill="#526f48" fill-opacity=".22"/>
+      <circle cx="596" cy="486" r="48" fill="#526f48"/>
+      <circle cx="583" cy="473" r="17" fill="#fff7dd" fill-opacity=".9"/>
+      <text x="596" y="492" font-size="17" fill="#263036">memory</text>
+    </g>
+  </g>
+  <circle cx="366" cy="382" r="22" fill="#bb6b45" fill-opacity=".75"/>
+  <circle cx="368" cy="382" r="6" fill="#fff8df"/>
+  <circle cx="500" cy="447" r="26" fill="#425d82" fill-opacity=".72"/>
+  <circle cx="502" cy="447" r="7" fill="#fff8df"/>
+  <text x="28" y="722" fill="#263036" fill-opacity=".12" font-size="84" font-weight="800" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">WEATHER</text>
+</svg>

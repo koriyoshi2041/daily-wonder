@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Proof Loom thumbnail">
+  <rect width="400" height="400" fill="#f3efe4"/>
+  <g stroke="#ded6c4" stroke-width="1">
+    <path d="M-20 70 430 170M-30 124 420 224M-18 178 432 278M-28 232 422 332M-20 286 430 386"/>
+    <path d="M70-20-10 420M140-20 60 420M210-20 130 420M280-20 200 420M350-20 270 420"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M78 108 C126 76 154 145 200 116 S290 79 326 130" stroke="#253238" stroke-width="7" opacity=".45"/>
+    <path d="M92 124 C138 198 156 228 208 220 S285 214 316 266" stroke="#415f8c" stroke-width="5" opacity=".55"/>
+    <path d="M200 116 C188 164 202 184 208 220 S214 281 196 326" stroke="#9b8747" stroke-width="6" opacity=".5"/>
+    <path d="M326 130 C296 184 294 220 316 266" stroke="#8a4c58" stroke-width="5" opacity=".48"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">
+    <circle cx="78" cy="108" r="38" fill="#253238"/>
+    <circle cx="78" cy="108" r="15" fill="#fff7df"/>
+    <text x="78" y="113" font-size="14" fill="#1f292d">pre</text>
+    <circle cx="200" cy="116" r="34" fill="#ba6f40"/>
+    <circle cx="200" cy="116" r="13" fill="#fff7df"/>
+    <text x="200" y="121" font-size="13" fill="#1f292d">ana</text>
+    <circle cx="326" cy="130" r="39" fill="#8a4c58"/>
+    <circle cx="326" cy="130" r="15" fill="#fff7df"/>
+    <text x="326" y="135" font-size="13" fill="#1f292d">cnt</text>
+    <circle cx="92" cy="228" r="40" fill="#415f8c"/>
+    <circle cx="92" cy="228" r="15" fill="#fff7df"/>
+    <text x="92" y="233" font-size="13" fill="#1f292d">inf</text>
+    <circle cx="208" cy="220" r="36" fill="#9b8747"/>
+    <circle cx="208" cy="220" r="14" fill="#fff7df"/>
+    <text x="208" y="225" font-size="12" fill="#1f292d">cmp</text>
+    <circle cx="316" cy="266" r="34" fill="#4f7a7a"/>
+    <circle cx="316" cy="266" r="13" fill="#fff7df"/>
+    <text x="316" y="271" font-size="12" fill="#1f292d">trn</text>
+    <circle cx="196" cy="326" r="44" fill="#2e3f53"/>
+    <circle cx="196" cy="326" r="17" fill="#fff7df"/>
+    <text x="196" y="331" font-size="14" fill="#1f292d">clm</text>
+  </g>
+  <circle cx="248" cy="190" r="13" fill="#c4492d"/>
+  <circle cx="248" cy="190" r="4" fill="#fff7df" opacity=".85"/>
+  <text x="24" y="366" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="800" fill="#253238" opacity=".16">PROOF</text>
+</svg>
