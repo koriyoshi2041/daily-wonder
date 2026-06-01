@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Inference Switchboard thumbnail">
+  <rect width="800" height="800" fill="#ece8dc"/>
+  <g stroke="#d4c9b6" stroke-width="2">
+    <path d="M80 0v800M190 0v800M300 0v800M410 0v800M520 0v800M630 0v800M740 0v800"/>
+    <path d="M0 90h800M0 200h800M0 310h800M0 420h800M0 530h800M0 640h800M0 750h800"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M206 202C304 160 452 177 558 254" stroke="#293634" stroke-width="10" opacity=".55"/>
+    <path d="M218 554C309 453 466 418 590 519" stroke="#293634" stroke-width="12" opacity=".5"/>
+    <path d="M179 388C333 292 491 299 636 382" stroke="#b2533c" stroke-width="7" opacity=".75"/>
+    <path d="M279 269C348 413 442 499 557 586" stroke="#315f66" stroke-width="8" opacity=".68"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700">
+    <g transform="translate(126 153)">
+      <rect x="9" y="12" width="155" height="78" rx="8" fill="#263030" opacity=".24"/>
+      <rect width="155" height="78" rx="8" fill="#7b6952"/>
+      <rect x="13" y="13" width="129" height="11" rx="5" fill="#fff3d7" opacity=".85"/>
+      <text x="18" y="50" font-size="23" fill="#f6ecd2">premise</text>
+    </g>
+    <g transform="translate(483 198)">
+      <rect x="9" y="12" width="150" height="78" rx="8" fill="#263030" opacity=".24"/>
+      <rect width="150" height="78" rx="8" fill="#315f66"/>
+      <rect x="13" y="13" width="111" height="15" rx="5" fill="#fff3d7" opacity=".85"/>
+      <text x="18" y="50" font-size="23" fill="#f6ecd2">scope</text>
+    </g>
+    <g transform="translate(86 494)">
+      <rect x="9" y="12" width="146" height="78" rx="8" fill="#263030" opacity=".24"/>
+      <rect width="146" height="78" rx="8" fill="#b2533c"/>
+      <rect x="13" y="13" width="100" height="14" rx="5" fill="#fff3d7" opacity=".85"/>
+      <text x="18" y="50" font-size="23" fill="#f6ecd2">test</text>
+    </g>
+    <g transform="translate(542 498)">
+      <rect x="9" y="12" width="160" height="78" rx="8" fill="#263030" opacity=".24"/>
+      <rect width="160" height="78" rx="8" fill="#485f3e"/>
+      <rect x="13" y="13" width="124" height="12" rx="5" fill="#fff3d7" opacity=".85"/>
+      <text x="18" y="50" font-size="23" fill="#f6ecd2">claim</text>
+    </g>
+    <text x="36" y="742" fill="#263238" font-size="86" opacity=".2">ROUTE</text>
+  </g>
+  <circle cx="392" cy="384" r="26" fill="#8f7b2c"/>
+  <circle cx="392" cy="384" r="8" fill="#fff6dc"/>
+  <circle cx="524" cy="302" r="18" fill="#b2533c"/>
+  <circle cx="524" cy="302" r="6" fill="#fff6dc"/>
+</svg>

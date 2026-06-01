@@ -52,7 +52,7 @@ const { sketchDate, width = 800, height = 800 } = Astro.props
       }
       const fallback = document.createElement('iframe')
       fallback.title = `${sketchDate} standalone sketch`
-      fallback.src = `/sketches/${sketchDate}/`
+      fallback.src = `/sketches/${sketchDate}/index.html`
       fallback.loading = 'lazy'
       fallback.setAttribute('allow', 'fullscreen')
       container.appendChild(fallback)
