@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence Loom thumbnail</title>
+  <desc id="desc">Colored evidence anchors connected by woven ink lines on a warm paper background.</desc>
+  <rect width="800" height="800" fill="#e9e1cf"/>
+  <g stroke="#cfc2aa" stroke-width="2" opacity=".55">
+    <path d="M0 116h800M0 198h800M0 280h800M0 362h800M0 444h800M0 526h800M0 608h800M0 690h800"/>
+    <path d="M92 0v800M174 0v800M256 0v800M338 0v800M420 0v800M502 0v800M584 0v800M666 0v800M748 0v800"/>
+  </g>
+  <text x="26" y="740" fill="#363730" opacity=".13" font-family="system-ui, sans-serif" font-size="148" font-weight="800">LOOM</text>
+  <g fill="none" stroke-linecap="round">
+    <path d="M186 220C302 165 430 302 564 214" stroke="#2d3730" stroke-opacity=".42" stroke-width="9"/>
+    <path d="M168 406C298 330 432 502 632 386" stroke="#2d3730" stroke-opacity=".34" stroke-width="12"/>
+    <path d="M218 574C360 448 506 632 638 250" stroke="#2d3730" stroke-opacity=".28" stroke-width="7"/>
+    <path d="M220 250C322 420 482 214 590 546" stroke="#a04435" stroke-opacity=".55" stroke-width="5"/>
+    <path d="M150 524C302 242 486 448 662 332" stroke="#2f5f5c" stroke-opacity=".48" stroke-width="5"/>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#302e29">
+    <g>
+      <ellipse cx="186" cy="220" rx="54" ry="35" fill="#2f5f5c"/>
+      <ellipse cx="174" cy="213" rx="32" ry="10" fill="#f8edd6" opacity=".86"/>
+      <text x="186" y="281">observe</text>
+    </g>
+    <g>
+      <ellipse cx="564" cy="214" rx="54" ry="35" fill="#4d5f80"/>
+      <ellipse cx="552" cy="207" rx="33" ry="10" fill="#f8edd6" opacity=".86"/>
+      <text x="564" y="275">define</text>
+    </g>
+    <g>
+      <ellipse cx="168" cy="406" rx="54" ry="35" fill="#6d5267"/>
+      <ellipse cx="156" cy="399" rx="30" ry="10" fill="#f8edd6" opacity=".86"/>
+      <text x="168" y="467">counter</text>
+    </g>
+    <g>
+      <ellipse cx="632" cy="386" rx="54" ry="35" fill="#47693f"/>
+      <ellipse cx="620" cy="379" rx="31" ry="10" fill="#f8edd6" opacity=".86"/>
+      <text x="632" y="447">test</text>
+    </g>
+    <g>
+      <ellipse cx="218" cy="574" rx="54" ry="35" fill="#897536"/>
+      <ellipse cx="206" cy="567" rx="29" ry="10" fill="#f8edd6" opacity=".86"/>
+      <text x="218" y="635">transfer</text>
+    </g>
+    <g>
+      <ellipse cx="638" cy="550" rx="54" ry="35" fill="#a04435"/>
+      <ellipse cx="626" cy="543" rx="34" ry="10" fill="#f8edd6" opacity=".86"/>
+      <text x="638" y="611">claim</text>
+    </g>
+  </g>
+  <g>
+    <ellipse cx="384" cy="344" rx="24" ry="13" fill="#a04435"/>
+    <circle cx="384" cy="344" r="5" fill="#f8edd6"/>
+    <ellipse cx="470" cy="466" rx="22" ry="12" fill="#2f5f5c"/>
+    <circle cx="470" cy="466" r="5" fill="#f8edd6"/>
+  </g>
+</svg>
