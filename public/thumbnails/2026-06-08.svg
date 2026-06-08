@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Context Quarantine thumbnail</title>
+  <desc id="desc">A paper-colored receipt diagram with quarantine rings and red contaminated claim paths.</desc>
+  <rect width="400" height="400" fill="#f2ead8"/>
+  <g opacity="0.45" stroke="#d6cab2" stroke-width="1">
+    <path d="M0 62h400M0 124h400M0 186h400M0 248h400M0 310h400M62 0v400M124 0v400M186 0v400M248 0v400M310 0v400"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M64 92C124 122 124 68 184 96S260 170 330 128" stroke="#b54436" stroke-width="7" opacity="0.72"/>
+    <path d="M62 196C126 178 128 232 190 210S260 182 334 224" stroke="#463f35" stroke-width="5" opacity="0.44"/>
+    <path d="M64 304C122 278 136 318 192 290S264 256 334 280" stroke="#2f6260" stroke-width="5" opacity="0.62"/>
+  </g>
+  <g fill="#f8edd6" stroke-width="3">
+    <ellipse cx="64" cy="92" rx="26" ry="18" fill="#7e4b39" stroke="#3f3029"/>
+    <ellipse cx="184" cy="96" rx="27" ry="18" fill="#b54436" stroke="#3f3029"/>
+    <ellipse cx="330" cy="128" rx="27" ry="18" fill="#b54436" stroke="#3f3029"/>
+    <ellipse cx="62" cy="196" rx="27" ry="18" fill="#5f6452" stroke="#3f3029"/>
+    <ellipse cx="190" cy="210" rx="27" ry="18" fill="#2f6260" stroke="#3f3029"/>
+    <ellipse cx="334" cy="224" rx="27" ry="18" fill="#405477" stroke="#3f3029"/>
+    <ellipse cx="64" cy="304" rx="26" ry="18" fill="#7e4b39" stroke="#3f3029"/>
+    <ellipse cx="192" cy="290" rx="27" ry="18" fill="#2f6260" stroke="#3f3029"/>
+    <ellipse cx="334" cy="280" rx="27" ry="18" fill="#405477" stroke="#3f3029"/>
+  </g>
+  <g fill="none" stroke="#2f6260" stroke-width="5" stroke-dasharray="12 10">
+    <circle cx="142" cy="138" r="56"/>
+    <circle cx="246" cy="228" r="68"/>
+  </g>
+  <text x="24" y="48" font-family="ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="800" fill="#302c27">CONTEXT</text>
+  <text x="24" y="76" font-family="ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="800" fill="#302c27">QUARANTINE</text>
+  <text x="24" y="364" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" font-weight="700" fill="#6e6355">accepted risk held before output</text>
+</svg>
