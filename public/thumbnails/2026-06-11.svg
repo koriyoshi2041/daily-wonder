@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Attention Ledger thumbnail</title>
+  <desc id="desc">A paper learning board with colored blocks, bridge lines, and two attention lenses.</desc>
+  <rect width="400" height="400" fill="#ece7d8"/>
+  <g opacity="0.38" stroke="#cfc5ad" stroke-width="1">
+    <path d="M0 70h400M0 136h400M0 202h400M0 268h400M0 334h400M70 0v400M136 0v400M202 0v400M268 0v400M334 0v400"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M78 126C122 86 156 112 198 146S274 190 326 156" stroke="#315e78" stroke-width="7" opacity="0.55"/>
+    <path d="M72 248C126 226 152 282 204 242S270 214 330 268" stroke="#b94b3d" stroke-width="5" opacity="0.52"/>
+    <path d="M96 184C148 166 166 206 220 188S282 120 316 104" stroke="#4f7255" stroke-width="5" opacity="0.62"/>
+  </g>
+  <g stroke="#282621" stroke-width="2">
+    <rect x="44" y="96" width="72" height="36" rx="3" fill="#315e78"/>
+    <rect x="162" y="126" width="78" height="38" rx="3" fill="#b28a36"/>
+    <rect x="286" y="136" width="72" height="36" rx="3" fill="#4f7255"/>
+    <rect x="60" y="226" width="78" height="38" rx="3" fill="#6c5a8d"/>
+    <rect x="170" y="222" width="78" height="38" rx="3" fill="#b94b3d"/>
+    <rect x="282" y="252" width="76" height="38" rx="3" fill="#315e78"/>
+  </g>
+  <g fill="none" stroke-width="5">
+    <circle cx="146" cy="170" r="82" stroke="#315e78" opacity="0.82"/>
+    <circle cx="250" cy="230" r="72" stroke="#4f7255" opacity="0.82"/>
+    <circle cx="146" cy="170" r="4" stroke="#282621"/>
+    <circle cx="250" cy="230" r="4" stroke="#282621"/>
+  </g>
+  <g fill="#ece7d8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">
+    <text x="80" y="120">TERM</text>
+    <text x="201" y="151">EDGE</text>
+    <text x="322" y="160">TEST</text>
+    <text x="99" y="251">SCOPE</text>
+    <text x="209" y="247">PROOF</text>
+    <text x="320" y="276">MAP</text>
+  </g>
+  <text x="26" y="46" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25" font-weight="900" fill="#282621">ATTENTION</text>
+  <text x="26" y="76" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25" font-weight="900" fill="#282621">LEDGER</text>
+  <text x="26" y="358" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="700" fill="#655e51">clarity where attention meets evidence</text>
+</svg>
